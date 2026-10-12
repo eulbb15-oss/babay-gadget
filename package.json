@@ -1,0 +1,29 @@
+{
+  "name": "babay-gadget",
+  "version": "1.0.0",
+  "private": true,
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "typecheck": "tsc --noEmit",
+    "test": "tsx --test \"tests/**/*.test.ts\"",
+    "verify": "npm run typecheck && npm test && npm run build"
+  },
+  "dependencies": {
+    "next": "^16.4.0",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "server-only": "^0.0.1"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/react": "^19.0.0",
+    "@types/react-dom": "^19.0.0",
+    "autoprefixer": "^10.6.1",
+    "postcss": "^8.5.29",
+    "tailwindcss": "^3.4.19",
+    "tsx": "^4.19.0",
+    "typescript": "^5.7.0"
+  }
+}

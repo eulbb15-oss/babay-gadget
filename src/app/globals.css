@@ -1,0 +1,29 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { background: #fff; color: #000; }
+  body { font-family: var(--font-sans), ui-sans-serif, system-ui, sans-serif; -webkit-font-smoothing: antialiased; line-height: 1.5; }
+  ::selection { background: #000; color: #fff; }
+  :focus-visible { outline: 3px solid #000; outline-offset: 2px; }
+  .gelap :focus-visible { outline-color: #fff; }
+  input, select, textarea { border-radius: 0; }
+  input[type="number"]::-webkit-inner-spin-button { display: none; }
+  @media (prefers-reduced-motion: reduce) { * { animation: none !important; transition: none !important; } }
+}
+
+@layer components {
+  .angka { font-family: var(--font-mono), ui-monospace, Menlo, Consolas, monospace; font-variant-numeric: tabular-nums; }
+  /* Garis ganda di bawah total – konvensi buku besar */
+  .total-ganda { border-bottom: 4px double #000; }
+  .tabel th { text-align: left; font-weight: 600; padding: .5rem .75rem; border-bottom: 2px solid #000; white-space: nowrap; }
+  .tabel td { padding: .5rem .75rem; border-bottom: 1px solid #c9c9c9; vertical-align: top; }
+  .tabel th.kanan, .tabel td.kanan { text-align: right; }
+  .tabel tfoot td { border-top: 2px solid #000; border-bottom: 0; font-weight: 600; }
+}
+
+@media print {
+  @page { margin: 14mm; }
+  body { background: #fff; }
+}
